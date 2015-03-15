@@ -3,6 +3,7 @@
 <title>  Home </title>
 </head>
 <body>
+
 <?php
 //connecting to a mysql database
 $con= mysql_connect("mysql.1freehosting.com", "u357510163_johny", "fuckfuck");
