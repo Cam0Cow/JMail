@@ -1,1 +1,77 @@
+body{
+background-color:#E5E5E5 ;
 
+}
+.top{
+height: 40px; 
+
+
+}
+.div1{
+text-align: center;
+background-color: #3b5998; 
+border: 2px solid #a1a1a1;
+padding: 10px 40px; 
+width: 275px;
+height: 200px;
+border-radius: 25px;
+box-shadow: 10px 10px 5px #888888;
+}
+.sign-in{
+font-size: 25px; 
+font-family: arial; 
+text-shadow:5px 5px 10px #888888; 
+
+}
+.comments{
+font-size: 10px; 
+font-family: arial;
+
+}
+input[type=text], input[type="password"]{
+border-radius: 10px; 
+
+
+}
+ input[type="submit"]{
+-moz-box-shadow:inset 0px 1px 5px 0px #ffffff;
+-webkit-box-shadow:inset 0px 1px 5px 0px #ffffff;
+box-shadow:inset 0px 1px 5px 0px #ffffff;
+background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf));
+background:-moz-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+background:-webkit-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+background:-o-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+background:-ms-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf',GradientType=0);
+background-color:#ededed;
+-moz-border-radius:10px;
+-webkit-border-radius:10px;
+border-radius:12px;
+border:2px solid #dcdcdc;
+display:inline-block;
+cursor:pointer;
+color:#777777;
+font-family:arial;
+font-size:12px;
+font-weight:bold;
+padding:9px 24px;
+text-decoration:none;
+text-shadow:0px 1px 0px #ffffff;
+}
+input[type="submit"]:hover {
+background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed));
+background:-moz-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+background:-webkit-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+background:-o-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+background:-ms-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed',GradientType=0);
+background-color:#dfdfdf;
+}
+input[type="submit"]:active {
+position:relative;
+top:1px;
+}
+
+ }
