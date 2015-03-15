@@ -25,8 +25,10 @@
 </div>
 </center>
 <?php
+//checks if the user submitted the form and tells the program what to do in case he(The user) did send the form. 
 if (isset($_POST['submit']))
 {
+//unsets the cookie
 unset($_COOKIE['mycookiename']);
 //defines the variables from the form.
 $username=$_POST['username'];
@@ -53,13 +55,15 @@ if ($userpassword_validation==1)
 setcookie("username", $username); 
 setcookie("logged-in", $password); 
 mysql_close($con);
-?>
+//redirects the user to a different page. 
 <META http-equiv="refresh" content="0;URL=http://jmail.allalla.com/home.php">
-<?php
+//exits the program
 exit();	
 }
+//otherwise...
 else
 {
+//informs the user that their password is incorrect. 
 echo "<br><center><font color='red'>Your username or password are incorrect!.</center></font>";
 }
 }
