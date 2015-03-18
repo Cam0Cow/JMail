@@ -6,8 +6,7 @@ $decision= mysqli_num_rows(mysqli_query($con, "SELECT * FROM Users WHERE Passwor
 //If the password's cookie does have a match in the database...
  if (isset($_COOKIE['username']) && $decision>0)
  {
- //Welcomes the user.
- echo "Welcome ".$_COOKIE['username']. "! <BR> You have successfully logged in!";
+  
  }
  //otherwise
  else
@@ -59,7 +58,7 @@ echo "can't connect to the database";
 //Adds the emails into the database. 
 mysqli_query(""); 
 
-mysqli_close()
+mysqli_close($con);
 }
 }
 }
