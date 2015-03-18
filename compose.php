@@ -1,5 +1,6 @@
 <html>
 <?php
+function LOG-IN_Verification(){
 $cookie= $_COOKIE['logged-in'];
 //Checks if the value of the cookie(The password) has a match in the database.
 $decision= mysqli_num_rows(mysqli_query($con, "SELECT * FROM Users WHERE Password LIKE '.$cookie.'"));
@@ -14,6 +15,7 @@ $decision= mysqli_num_rows(mysqli_query($con, "SELECT * FROM Users WHERE Passwor
  //Redirects the user to the logg-in page if he doesn't have a cookie.
  echo "<meta http-equiv='refresh' content='0;url=http://jmail.allalla.com/logg-in.php'>";
  }
+}
  ?>
 
 ?>
