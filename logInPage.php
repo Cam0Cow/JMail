@@ -29,7 +29,7 @@
 if (isset($_POST['submit']))
 {
 //unsets the cookie
-unset($_COOKIE['mycookiename']);
+unset($_COOKIE['username']);
 //defines the variables from the form.
 $username=$_POST['username'];
 $password=$_POST['password'];
@@ -56,7 +56,8 @@ setcookie("username", $username);
 setcookie("logged-in", $password); 
 mysql_close($con);
 //redirects the user to a different page. 
-<META http-equiv="refresh" content="0;URL=http://jmail.allalla.com/home.php">
+echo "<META http-equiv='refresh' content='0;URL=http://jmail.allalla.com/home.php'>";  
+
 //exits the program
 exit();	
 }
