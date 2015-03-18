@@ -141,6 +141,7 @@
 </div>
 </center>
 <?php
+unset($_COOKIE['username']);
 if (isset($_POST['SUp']))
 {
 //checks that the form is filled out.
