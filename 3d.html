@@ -1,0 +1,64 @@
+<html>
+<head><title>3d</title></head>
+<body><\body>
+<script src="http://gamingJS.com/Three.js"></script>
+<script src="http://gamingJS.com/ChromeFixes.js"></script>
+<script>
+  // This is where stuff in our game will happen:
+  var scene = new THREE.Scene();
+
+  // This is what sees the stuff:
+  var aspect_ratio = window.innerWidth / window.innerHeight;
+  var camera = new THREE.PerspectiveCamera(75, aspect_ratio, 1, 10000);
+  camera.position.z = 500;
+  scene.add(camera);
+
+  // This will draw what the camera sees onto the screen:
+  var renderer = new THREE.CanvasRenderer();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  document.body.appendChild(renderer.domElement);
+
+  // ******** START CODING ON THE NEXT LINE ********
+  var shape = new THREE.SphereGeometry(100, 20, 20);
+  var cover = new THREE.MeshNormalMaterial();
+  var ball = new  THREE.Mesh(shape, cover);
+  scene.add(ball);
+  ball.position.set(-250, 250, -250);
+  
+  shape = new THREE.CubeGeometry(100, 100, 100);
+  cover = new THREE.MeshNormalMaterial();
+  var box = new THREE.Mesh(shape, cover);
+  scene.add(box);
+  box.rotation.set(0.5, 0.5, 0);
+  box.position.set(250, 250, -250);
+  
+  shape = new THREE.CylinderGeometry(0, 100, 100, 4);
+  cover = new THREE.MeshNormalMaterial();
+  var cylinder = new THREE.Mesh(shape, cover);
+  scene.add(cylinder);
+  cylinder.rotation.set(0.5,0,0);
+  cylinder.position.set(250, -250, -250);
+  
+  shape = new THREE.TorusGeometry(100, 25, 20, 20);
+  cover = new THREE.MeshNormalMaterial();
+  var doughnut = new THREE.Mesh(shape, cover);
+  scene.add(doughnut);
+  doughnut.rotation.set(0, -0.5, 0);
+  doughnut.position.set(-250, -250, -250);
+  
+  var clock = new THREE.Clock();
+  function animate() {
+   requestAnimationFrame(animate);
+   var t = clock.getElapsedTime();
+   ball.rotation.set(t, t*2, 0);
+   box.rotation.set(t, t*2, 0);
+   cylinder.rotation.set(t, t*2, 0);
+   doughnut.rotation.set(t, t*2, 0);
+   renderer.render(scene, camera);
+  }
+  animate();
+
+  // Now, show what the camera sees on the screen:
+  renderer.render(scene, camera);
+  </script>
+</html>
