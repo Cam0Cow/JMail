@@ -1,6 +1,6 @@
 <html>
 <?php
-function LOG-IN_Verification(){
+function LOG_IN_Verification() {
 $cookie= $_COOKIE['logged-in'];
 //Checks if the value of the cookie(The password) has a match in the database.
 $decision= mysqli_num_rows(mysqli_query($con, "SELECT * FROM Users WHERE Password LIKE '.$cookie.'"));
@@ -18,11 +18,18 @@ $decision= mysqli_num_rows(mysqli_query($con, "SELECT * FROM Users WHERE Passwor
 }
  ?>
 
-?>
-<head>
 
+<head>
+<link rel="stylesheet" href="sign-in.css"/>
 </head>
 <body>
+<div class="top"><center><p class="sign-in"> Log In </p></center></div>
+<hr/>
+<br/>
+<br/>
+<br/>
+<center>
+<div class="div3">
 <form method="get">
 <input type="text" name="Reciever" placeholder="To":> 
 <br>
@@ -58,11 +65,11 @@ if (mysqli_connect_errno())
 echo "can't connect to the database";	
 }
 //Adds the emails into the database. 
-mysqli_query(""); 
+
 
 mysqli_close($con);
 }
 }
-}
+
 
 ?>
