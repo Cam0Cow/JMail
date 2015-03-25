@@ -56,7 +56,7 @@ setcookie("username", $username);
 setcookie("logged-in", $password); 
 mysql_close($con);
 //redirects the user to a different page. 
-echo "<META http-equiv='refresh' content='0;URL=http://jmail.allalla.com/inbox.php'>";  
+echo "<META http-equiv='refresh' content='0;URL=http://jmail.allalla.com/Inbox.php'>";  
 
 //exits the program
 exit();	
