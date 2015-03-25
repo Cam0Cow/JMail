@@ -3,6 +3,7 @@
 <body>
 <script src="http://gamingJS.com/Three.js"></script>
 <script src="http://gamingJS.com/ChromeFixes.js"></script>
+<script src="threex.text.js"> </script>
 <script>
   // This is where stuff in our game will happen:
   var scene = new THREE.Scene();
@@ -45,6 +46,14 @@
   scene.add(doughnut);
   doughnut.rotation.set(0, -0.5, 0);
   doughnut.position.set(-250, -250, -250);
+  
+  var text = new THREEx.text("Look At The Shapes...", {
+    font: "serif",
+    weight: "bold",
+    size: 1,
+    height: 0.4
+  });
+  scene.add(text);
   
   var clock = new THREE.Clock();
   function animate() {
