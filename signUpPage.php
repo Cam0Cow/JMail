@@ -196,7 +196,7 @@ mysqli_close($con);
 
 
 //Redirects the user to the home page if his password his correct.
-echo "<meta http-equiv='refresh' content='0;url=http://jmail.allalla.com/home.php'>";
+echo "<meta http-equiv='refresh' content='0;url=http://jmail.allalla.com/inbox.php'>";
 exit();
 }
 }
