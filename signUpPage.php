@@ -8,7 +8,7 @@
 <center><div class= "top"><p class="sign-in" >Sign Up</p><div></center>
 <br/>
 <center>
-<p color=red>This doesn't yet work–click this link </p> <a href=http://jmail.allalla.com/3d.html>Click To Be Entertained</a>
+<p color=red>This doesn't yet work--click this link </p> <a href=http://jmail.allalla.com/3d.html>Click To Be Entertained</a>
 </center>
 <br/>
 <br/>
