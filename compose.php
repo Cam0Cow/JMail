@@ -1,5 +1,12 @@
 <html>
 <?php
+//connecting to a mysql database
+$con= mysqli_connect("mysql.1freehosting.com", "u357510163_johny", "fuckfuck", "u357510163_fuck");
+//informs the user if there is an error in the connection.
+if (mysqli_connect_errno())
+{
+echo "can't connect to the database";	
+}
 function LOG_IN_Verification() {
 $cookie= $_COOKIE['logged-in'];
 //Checks if the value of the cookie(The password) has a match in the database.
@@ -57,13 +64,7 @@ $email=$_GET['Email'];
 $sender=$_COOKIE['"username'];
 
 
-//connecting to a mysql database
-$con= mysqli_connect("mysql.1freehosting.com", "u357510163_johny", "fuckfuck", "u357510163_fuck");
-//informs the user if there is an error in the connection.
-if (mysqli_connect_errno())
-{
-echo "can't connect to the database";	
-}
+
 //Adds the emails into the database. 
 
 
