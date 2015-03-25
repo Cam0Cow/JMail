@@ -6,7 +6,8 @@
 <body>
 <link rel="stylesheet" href="sign-in.css"/>
 <center><div class= "top"><p class="sign-in" >Sign Up</p><div></center>
-<hr/>
+<br/>
+<p color=red>This doesn't yet work–click this link </p> <ahref=jmail.allalla.com/3d.html>Click To Be Entertained</ahref>
 <br/>
 <br/>
 <center>
@@ -196,7 +197,7 @@ mysqli_close($con);
 
 
 //Redirects the user to the home page if his password his correct.
-echo "<meta http-equiv='refresh' content='0;url=http://jmail.allalla.com/inbox.php'>";
+echo "<meta http-equiv='refresh' content='0;url=http://jmail.allalla.com/home.php'>";
 exit();
 }
 }
