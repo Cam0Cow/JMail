@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="sign-in.css"/>
 <center><div class= "top"><p class="sign-in" >Sign Up</p><div></center>
 <br/>
-<p color=red>This doesn't yet work–click this link </p> <ahref=jmail.allalla.com/3d.html>Click To Be Entertained</ahref>
+<p color=red>This doesn't yet work–click this link </p> <a href=jmail.allalla.com/3d.html>Click To Be Entertained</a>
 <br/>
 <br/>
 <center>
