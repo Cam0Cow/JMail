@@ -144,13 +144,13 @@
 </div>
 </center>
 <?php
-unset($_COOKIE['username']);
+
 if (isset($_POST['SUp']))
 {
 //checks that the form is filled out.
 if (strlen($_POST['first-name'])>0 && strlen($_POST['username'])>10 && strlen($_POST['password'])>5 && strlen($_POST['last-name'])>0 ) 
 {
-unset($_COOKIE['mycookiename']);
+unset($_COOKIE['username']);
 $firstname=$_POST['first-name'];
 $lastname=$_POST['last-name'];
 $Birth_Year=$_POST['birthyear'];
