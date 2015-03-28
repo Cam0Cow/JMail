@@ -21,7 +21,7 @@ echo "can't connect to the database";
 }
 //Defines a variable for the password's cookie.
 $cookie= $_COOKIE['logged-in'];
-
+$cookie2=$_COOKIE['username'];
 //Checks if the value of the cookie(The password) has a match in the database.
 $decision= mysql_num_rows(mysql_query("SELECT * FROM Users WHERE Password LIKE '.$cookie.'", $con));
 
@@ -29,15 +29,16 @@ $decision= mysql_num_rows(mysql_query("SELECT * FROM Users WHERE Password LIKE '
  if (isset($_COOKIE['username']) && $decision>0)
  {
 //Queries the database for all of the emails sent to this specific user.
-$query=mysql_query("SELECT * FROM Messages WHERE reciever LIKE '.$cookie.'");
+$query=mysql_query("SELECT * FROM Messages WHERE reciever LIKE '.$cookie2.'", $con);
 //outputs the message from the database
-if ($query->num_rows > 0) {
+
     // output data of each row
-    while($row = $query->fetch_assoc()) {
-        echo  "From: " . $row["sender"]. " subject: ". $row['subject']. "<form action='view_message.php' method="post"> <input type='hidden' name='id' value='" . $row['id']. "'> <input type='submit' name='submit' value='view message'> <br></hr>";    }
+    while($row = mysql_fetch_array($query)) {
+        echo  "From: " . $row['sender']. " subject: ". $row['subject']. "<form action='view_message.php'> <input type='hidden' name='id' value='" . $row['id']. "'> <input type='submit' name='submit' value='view message'> <br></hr>";    }
+
+ }
  
- }
- }
+ 
  //otherwise
  else
  {
