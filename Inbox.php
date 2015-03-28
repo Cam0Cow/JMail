@@ -1,9 +1,14 @@
 <html>
 <head>
 <title> Ibox </title>
+<link rel="stylesheet" href="sign-in.css"/>
 </head>
 <body>
-
+<div class="top"><center><p class="sign-in"> Inobx </p></center></div>
+<hr/>
+<br/>
+<br/>
+<br/>
 <?php
 //connecting to a mysql database
 $con= mysql_connect("mysql.1freehosting.com", "u357510163_johny", "fuckfuck");
@@ -23,8 +28,15 @@ $decision= mysql_num_rows(mysql_query("SELECT * FROM Users WHERE Password LIKE '
 //If the password's cookie does have a match in the database...
  if (isset($_COOKIE['username']) && $decision>0)
  {
- //Welcomes the user.
- echo "Welcome ".$_COOKIE['username']. "! <BR> You have successfully logged in!";
+//Queries the database for all of the emails sent to this specific user.
+$query=mysql_query("SELECT * FROM Messages WHERE reciever LIKE '.$cookie.'");
+//outputs the message from the database
+if ($query->num_rows > 0) {
+    // output data of each row
+    while($row = $query->fetch_assoc()) {
+        echo  "From: " . $row["sender"]. " subject: ". $row['subject']. "<form action='view_message.php'> <input type='hidden' name='id' value='" . $row['id']. "'> <input type='submit' name='submit' value='view message'> <br></hr>";    }
+ 
+ }
  }
  //otherwise
  else
