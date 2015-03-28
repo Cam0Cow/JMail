@@ -44,7 +44,7 @@ If(strlen($_GET['Reciever'])>10 && strlen($_GET['Reciever'])<100 && strlen($_GET
 $Reciever=$_GET['Reciever'];
 $subject=$_GET['Subject'];
 $email=$_GET['Email'];
-$sender=$_COOKIE['"username'];
+$sender=$_COOKIE['username'];
 
 //connecting to a mysql database
 $con= mysqli_connect("mysql.1freehosting.com", "u357510163_johny", "fuckfuck", "u357510163_fuck");
@@ -55,7 +55,7 @@ echo "can't connect to the database";
 }
 
 //Adds the emails into the database. 
-
+$query=mysqli_query($con, "INSERT INTO Messages(sender, reciever, message, subject) VALUES('.$sender.', '.$Reciever.', '.$email.', '.$subject.')");
 
 mysqli_close($con);
 }
