@@ -38,7 +38,7 @@
 <?php
 If(isset($_GET['Submit']))
 {
-If(strlen($_GET['Reciever'])>10 && strlen($_GET['Reciever'])<100 && strlen($_GET['subject'])>2 && strlen($_GET['subject'])>50 && strlen($_GET['Email'])>2 && strlen($_GET['Email'])>4096)
+If(strlen($_GET['Reciever'])>10 && strlen($_GET['Reciever'])<100 && strlen($_GET['subject'])>2 && strlen($_GET['subject'])<100 && strlen($_GET['Email'])>2 && strlen($_GET['Email'])<4096)
 {
 //Define variables. 
 $Reciever=$_GET['Reciever'];
