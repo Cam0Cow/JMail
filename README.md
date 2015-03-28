@@ -6,5 +6,5 @@ pay money for this so... yeah.
 
 Jmail is an open source e-mail emulator, with client/server capabillities. This does not comply with any currently available email protocols.
 
-WARNING!!!
-Do not transfer any important or private information with this just yet; Encryption is still WIP; Well, the whole damn thing is a WIP.
+WARNING!!! 
+Do not transfer any important or private information with this just yet; Encryption is still a WIP; Well, the whole damn thing is a WIP.
