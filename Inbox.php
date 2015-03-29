@@ -34,7 +34,7 @@ $query=mysql_query("SELECT * FROM Messages WHERE reciever LIKE '.$cookie2.'", $c
 
     // output data of each row
     while($row = mysql_fetch_array($query)) {
-        echo  "From: " . $row['sender']. " subject: ". $row['subject']. "<form action='view_message.php'> <input type='hidden' name='id' value='" . $row['id']. "'> <input type='submit' name='submit' value='view message'> <br></hr>";    }
+        echo  "From: " . $row['sender']. " subject: ". $row['subject']. "<form action='view_message.php'> <input type='hidden' name='id' value='" . $row['id']. "'> <input type='submit' name='submit' value='view message'></form> <br></hr>";    }
 
  }
  
